@@ -9,16 +9,19 @@ jobs:
   build-windows:
     runs-on: windows-latest
     steps:
-      - name: Checkout
+      - name: Checkout with submodules
         uses: actions/checkout@v4
         with:
           submodules: recursive
 
-      - name: Update godot-cpp to 4.7
+      - name: List directory contents
+        run: ls
+
+      - name: Check godot-cpp branch
         run: |
           cd godot-cpp
-          git fetch
-          git checkout godot-4.7
+          git branch -a
+          git log --oneline -5
 
       - name: Set up Python
         uses: actions/setup-python@v5
