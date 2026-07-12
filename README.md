@@ -153,6 +153,5 @@ This design allows the ONNX Loader to be flexible and handle various ONNX models
 
 
 > [!NOTE]
-> All contributions are welcome. 🤓
-
+> All contributions are welcome. 🤓 Trying to update for latest godot.
 
